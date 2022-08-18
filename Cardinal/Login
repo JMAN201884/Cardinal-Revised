@@ -275,4 +275,5 @@ void Forgot_Dev_Info()
 void Other()
 {
     int choice();
+    cout <<"1.Restart" endl;
 }
