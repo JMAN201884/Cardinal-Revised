@@ -44,6 +44,7 @@ void Login()
     {
         cout <<"Welcome"<<devuser<<"Please Select A Choice To Continue" endl;
         int choice();
-        
+        cout <<"1.Logout" endl;
+        cout <<"\n2.Exit" endl;
     }
 }
