@@ -4,5 +4,46 @@ using namespace std;
 
 main()
 {
-    
+    int choice();
+    cout <<"Welcome To The Settings" endl;
+    cout <<"1.Login" endl;
+    cout <<"\nenter Choice To Continue" endl;
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+            Login();
+            break;
+        default;
+            cout <<"Choice Not Availiable" endl;
+            main();
+    }
+}
+
+void Login()
+{
+    int exist;
+    string devuser,devpass,du,dp
+    system("cls");
+    cout <<"Enter Dev Username" endl;
+    cin>>devuser;
+    cout <<"Enter Dev Password" endl;
+    cin>>devpass;
+
+    ifstream input("database.txt")
+
+    while(input>>du>>dp)
+    {
+        if(du == devuser && dp == devpass)
+        {
+            exist = 1;
+        }
+    }
+    input.close();
+    if(exist == 1)
+    {
+        cout <<"Welcome"<<devuser<<"Please Select A Choice To Continue" endl;
+        int choice();
+        
+    }
 }
