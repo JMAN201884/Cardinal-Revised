@@ -138,6 +138,11 @@ void Dev_Login()
     }
 }
 
+void Logout()
+{
+    main();
+}
+
 void New_User()
 {
     string reguser,regpass
