@@ -1,0 +1,387 @@
+#include <iostream>
+
+using namespace std;
+
+main()
+{
+    int choice();
+    cout <<"Welcom To the Login" endl;
+    cout <<"1.Login" endl;
+    cout <<"\n2.Dev_Login" endl
+    cout <<"\n3.New_User" endl;
+    cout <<"\n4.Dev_Register" endl;
+    cout <<"\n5.Forgot_Info" endl;
+    cout <<"\n6.Rorgot_Dev_Info" endl;
+    cout <<"\n7.Other" endl;
+    cout <<"\nEnter Choice " endl;
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+            Login();
+            break;
+        case 2:
+            Dev_Login();
+            break;
+        case 3:
+            New_User();
+            break;
+        case 4:
+            Dev_Register();
+            break;
+        case 5:
+            Forgot_Info();
+            break;
+        case 6:
+            Forgot_Dev_Info();
+            break;
+        case 7:
+            Other();
+            break;
+        default:
+            cout <<"Error Choice Unavaliable" endl;
+            main();
+    }
+}
+
+void Login()
+{
+    int exists;
+    string user,pass,u,p;
+    system("cls");
+    cout <<"Enter Username" endl;
+    cin>>user;
+    cout <<"Enter Password" endl;
+    cin>>pass;
+
+    ifstream input("database.txt");
+
+    while(input>>u>>p)
+    {
+        if(u == user && p == pass)
+        {
+            exist = 1;
+        }
+    }
+    input.close();
+    if(exist == 1)
+    {
+        cout <<"Welcome"<<user<<"\nWelcome to Cardinal OS Build 0.0.04.500" endl;
+        cout <<"This is still a working progress so please wait for later updates." endl;
+        cout <<"Lead Dev JY48572" endl;
+        cin.get();
+        cin.get();
+        main();
+    }
+    else
+    {
+        cout <<"wrong Login" endl
+        cout <<"Please tyr again" endl;
+        cin.get();
+        cin.get();
+        main()
+    }
+    int exist;
+}
+
+void Dev_Login()
+{
+    int exist;
+    string devuser,devpass,du,dp
+    system("cls");
+    cout <<"Enter Dev Username" endl;
+    cin>>devuser;
+    cout <<:"Enter Dev Password" endl;
+    cing>>devpass;
+
+    ifstream input("database.txt")
+
+    while(input>>du>>dp)
+    {
+        if(du == devuser && dp == devpass)
+        {
+            exist = 1;
+        }
+    }
+    input.close();
+    if(exist == 1)
+    {
+        cout <<"Welcome"<<devuser<<"Please select a choice to continue." endl;
+        int choice();
+        cout <<"1.Setings" endl;
+        cout <<"\n2.Reboot OS" endl;
+        cout <<"\n3.Logout" endl;
+        cout <<"\n4.Exit" endl
+        switch(choice)
+        {
+            case 1:
+                Setings.h;
+                break;
+            case 2:
+                Reboot();
+                break;
+            case 3:
+                Logout();
+                break;
+            case 4:
+                Exit();
+                break;
+            default:
+                cout <<"Choice not there" endl;
+                main()
+        }
+    }
+    else
+    {
+        cout <<"Login Denide" endl;
+        cout <<"Closing OS" endl
+        cin.get();
+        cin.get();
+        return 0;
+    }
+}
+
+void New_User()
+{
+    string reguser,regpass
+    system("cls");
+    cout <<"Enter Username :" endl;
+    cin>>reguser;
+    cout <<"Enter Password :" endl;
+    cin>>regpass;
+
+    ofstream reg("database.txt", ios::app);
+    reg<<reguser'  '<<regpass<<endl;
+    cout <<"Registration Complete\n" endl;
+    main();
+}
+
+void Dev_Register()
+{
+    string regdevuser,regdevpass
+    system("cls");
+    cout <<"Enter DEV Username" endl;
+    cin>>regdevuser;
+    cout <<"Enter DEV Password" endl;
+    cin>>regdevpass;
+
+    ofstream reg("database.txt", ios::app);
+    reg<<regdevuser<<'  '<<regdevpass<<endl;
+    systen("cls");
+    cout <<"Registration Complete\n" endl;
+    main();
+}
+
+void Forgot_Info()
+{
+    int choice();
+    system("cls");
+    cout <<"1.Search By Username" endl;
+    cout <<"\n2.Search By Password" endl;
+    cout <<"\n3.Main Menu" endl;
+    cout <<"\nEnter Choice" endl;
+    cin>>choice;
+
+    switch(choice)
+    {
+        case 1:
+        {
+            int exist = 0;
+            string searchuser,su,sp;
+            cout <<"Enter Username :" endl;
+            cin>>searchuser;
+
+            ifstream serchuser("database");
+            while(searchuser>>su>>sp)
+            {
+                if(su == searchuser)
+                {
+                    exist = 1;
+                    break;
+                }
+            }
+            searchuser.close();
+            if(exist = 1)
+            {
+                cout <<"Account Found\n" endl;
+                cout <<"Password is"<<sp endl;
+                cin.get();
+                cin.get();
+                main();
+            }
+            else
+            {
+                cout <<"Account Not Found, Try Again\n" endl;
+                cin.get();
+                cin.get();
+                Forgot_info();
+            }
+            break;
+        }
+        case 2:
+        {
+            int exist = 0;
+            string searchpass, su,sp;
+            cout <<"Enter Password :" endl;
+            cin>>searchpass
+
+            ifstream searchpass("database.txt")
+            while(searchpass>>su>>sp)
+            {
+                if(sp == searchpass)
+                {
+                    exist = 1;
+                    break;
+                }
+            }
+            searchpass.close();
+            if(exist == 1)
+            {
+                cout <<"Account Located\n" endl;
+                cout <<"The Username Is :"<<su endl;
+                cin.get();
+                cin.get();
+                main();
+            }
+            else
+            {
+                cout <<"Account Not Found, Try again\n" endl;
+                cin.get();
+                cin.get();
+                Forgot_Info();
+            }
+            break;
+        }
+        case 3:
+        {
+            main();
+            break;
+        }
+        default:
+        {
+            cout <<"Choice Not Availiable, Try Again" endl;
+            cin.get();
+            cin.get();
+            Forgot_Info();
+        }
+    }
+}
+
+void Forgot_Dev_Info()
+{
+    int choice;
+    cout <<"1.Search Dev Account By Username" endl;
+    cout <<:"\n2.Search Dev Account Bt Password" endl;
+    cout <<"\n3.Main Menu" endl;
+    cout <<"\nEnter Choice" endl;
+    cin>>choice;
+
+    switch(choice)
+    {
+        case 1:
+        {
+            int exist = 0,
+            string searchdenuser,sdu,sdp;
+            cout <<"Enter Dev Username" endl;
+            cin>>searchdevuser;
+
+            ifstream searchdevuser("database.txt") endl;
+            while(searchdevuser>>sdu>>sdp)
+            {
+                if(sdu == searchdevuser)
+                {
+                    exist = 1;
+                    break;
+                }
+            }
+            searchdevuser.close();
+            if(exist == 1)
+            {
+                cout <<"Account Located\n" endl;
+                cout <<"Your Password :"<<sp endl;
+                cin.get();
+                cin.get();
+                main();
+            
+            }
+            else
+            {
+                cout <<"Account Not Found, Try Again\n" endl;
+                cin.get();
+                cin.get();
+                Forgot_Dev_Info();
+            }
+            break;
+        }
+        case 2:
+        {
+            int exist = 0;
+            string searchdevpass,sdu,sdp;
+            cout <<"Enter The Password :" endl;
+            cin>>searchdevpass;
+
+            ifstream searchdevpass("database.txt")
+            while(searchdevpass>>sdu>>sdp)
+            {
+                if(sdp == searchdevpass)
+                {
+                    exist = 1;
+                    break;
+                }
+            }
+            searchdevpass.close();
+            if(exist == 1)
+            {
+            cout <<"Account Found \n" endl;
+            cout <<"The Username Is :"<<sdu endl;
+            cin.get();
+            cin.get();
+            main();
+            }
+            break;
+        }
+        case 3:
+        {
+            main();
+            break;
+        }
+        default;
+        {
+            cout <<"Coiche Not Availiable" endl;
+            cin.get();
+            cin.get();
+            Forgot_Dev_Info();
+        }
+    }
+}
+
+void Other()
+{
+    int choice();
+    cout <<"1.Restart" endl;
+    cout <<"\n2.Close" endl;
+    cout <<"\nEnter Choice :" endl;
+    cin>>choice;
+    switch(choice)
+    {
+        case 1:
+            Restart();
+            break;
+        case 2:
+            Close();
+            break;
+        default:
+            cout <<"Choice Not Availiable" endl;
+            Other();
+    }
+}
+
+void Restart();
+{
+    return 1;
+}
+
+void Close();
+{
+    return 0;
+}
