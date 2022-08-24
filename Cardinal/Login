@@ -269,11 +269,99 @@ void Forgot_Info()
 
 void Forgot_Dev_Info()
 {
+    int choice;
+    cout <<"1.Search Dev Account By Username" endl;
+    cout <<:"\n2.Search Dev Account Bt Password" endl;
+    cout <<"\n3.Main Menu" endl;
+    cout <<"\nEnter Choice" endl;
+    cin>>choice;
 
+    switch(choice)
+    {
+        case 1:
+        {
+            int exist = 0,
+            string searchdenuser,sdu,sdp;
+            cout <<"Enter Dev Username" endl;
+            cin>>searchdevuser;
+
+            ifstream searchdevuser("database.txt") endl;
+            while(searchdevuser>>sdu>>sdp)
+            {
+                if(sdu == searchdevuser)
+                {
+                    exist = 1;
+                    break;
+                }
+            }
+            searchdevuser.close();
+            if(exist == 1)
+            {
+                cout <<"Account Located\n" endl;
+                cout <<"Your Password :"<<sp endl;
+                cin.get();
+                cin.get();
+                main();
+            
+            }
+            else
+            {
+                cout <<"Account Not Found, Try Again\n" endl;
+                cin.get();
+                cin.get();
+                Forgot_Dev_Info();
+            }
+            break;
+        }
+        case 2:
+        {
+            int exist = 0;
+            string searchdevpass,sdu,sdp;
+            cout <<"Enter The Password :" endl;
+            cin>>searchdevpass;
+
+            ifstream searchdevpass("database.txt")
+            while(searchdevpass>>sdu>>sdp)
+            {
+                if(sdp == searchdevpass)
+                {
+                    exist = 1;
+                    break;
+                }
+            }
+            searchdevpass.close();
+            if(exist == 1)
+            {
+            cout <<"Account Found \n" endl;
+            cout <<"The Username Is :"<<sdu endl;
+            cin.get();
+            cin.get();
+            main();
+            }
+            break;
+        }
+        case 3:
+        {
+            main();
+            break;
+        }
+        default;
+        {
+            cout <<"Coiche Not Availiable" endl;
+            cin.get();
+            cin.get();
+            Forgot_Dev_Info();
+        }
+    }
 }
 
 void Other()
 {
     int choice();
     cout <<"1.Restart" endl;
+    cout <<"\n2.Close" endl;
+    cout <<"\nEnter Choice :" endl;
+    cin>>choice;
+    switch(choice)
+    {}
 }
