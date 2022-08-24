@@ -109,21 +109,18 @@ void Dev_Login()
         cout <<"Welcome"<<devuser<<"Please select a choice to continue." endl;
         int choice();
         cout <<"1.Setings" endl;
-        cout <<"\n2.Reboot OS" endl;
-        cout <<"\n3.Logout" endl;
-        cout <<"\n4.Exit" endl
+        cout <<"\n2.Logout" endl;
+        cout <<"\n3.Exit" endl
+        cout <<"\nEnter Choice" endl;
         switch(choice)
         {
             case 1:
                 Setings.h;
                 break;
             case 2:
-                Reboot();
-                break;
-            case 3:
                 Logout();
                 break;
-            case 4:
+            case 3:
                 Exit();
                 break;
             default:
