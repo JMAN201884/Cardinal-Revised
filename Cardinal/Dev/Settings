@@ -46,5 +46,36 @@ void Login()
         int choice();
         cout <<"1.Logout" endl;
         cout <<"\n2.Exit" endl;
+        cout <<"\nEnter Choice" endl;
+        switch(choice)
+        {
+            case 1:
+                Logout();
+                break;
+            case 2:
+                Exit();
+                break;
+            default:
+                cout <<"Choice Not Availiable" endl;
+                Exit();
+        }
     }
+    else
+    {
+        cout <<"Login Denide" endl;
+        cout <<"Closing" endl;
+        cin.get();
+        cin.get();
+        return 0;
+    }
+}
+
+void Logout()
+{
+    return 0;
+}
+
+void Exit()
+{
+    return 0;
 }
