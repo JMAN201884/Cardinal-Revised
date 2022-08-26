@@ -124,7 +124,7 @@ void Dev_Login()
                 Exit();
                 break;
             default:
-                cout <<"Choice not there" endl;
+                cout <<"Choice Not Availiable" endl;
                 main()
         }
     }
