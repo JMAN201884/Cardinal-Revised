@@ -81,7 +81,7 @@ void Login()
         cout <<"Please tyr again" endl;
         cin.get();
         cin.get();
-        main()
+        main();
     }
     int exist;
 }
