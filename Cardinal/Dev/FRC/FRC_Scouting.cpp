@@ -30,5 +30,21 @@ main()
 
 void Login()
 {
+    int exist;
+    string tuser,tpass,tu,tp;
+    system("cls");
+    cout <<"Enter Username :" endl;
+    cin>>tuser;
+    cout <<"Enter Password :" endl;
+    cin>>tpass;
 
+    ifstream input("database.txt");
+
+    while(input>>tu>>tp)
+    {
+        if(tu == tuser && tp == tpass)
+        {
+            exist = 1;
+        }
+    }
 }
