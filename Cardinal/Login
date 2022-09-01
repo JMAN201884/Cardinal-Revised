@@ -364,6 +364,7 @@ void Other()
     int choice();
     cout <<"1.Restart" endl;
     cout <<"\n2.Close" endl;
+    cout <<"\n3.FRC" endl;
     cout <<"\nEnter Choice :" endl;
     cin>>choice;
     switch(choice)
@@ -373,6 +374,9 @@ void Other()
             break;
         case 2:
             Close();
+            break;
+        case 3:
+            FRC_Scouting.h
             break;
         default:
             cout <<"Choice Not Availiable" endl;
