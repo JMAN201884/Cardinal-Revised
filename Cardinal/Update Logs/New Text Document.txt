@@ -1,1 +1,13 @@
-This Is A Place Holder
+Cardinal update 0.0.04.000
+this is the lates update
+
+Revised Features
+
+    1. Simpler layout and layoutbugs fixed
+    2. The choice system was redone - fixing transitions between each menu.
+    3. No longer will return to the main menu.
+    
+Things Added
+
+    1. Settings for devs
+    2. FRC scouting for first Robotics
