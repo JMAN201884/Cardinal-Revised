@@ -384,6 +384,13 @@ void Other()
     }
 }
 
+FRC()
+{
+    int choice();
+    cout <<"Welcome To first Robotics" endl;
+    cout <<""
+}
+
 void Restart();
 {
     return 1;
