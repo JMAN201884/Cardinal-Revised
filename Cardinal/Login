@@ -68,7 +68,7 @@ void Login()
     input.close();
     if(exist == 1)
     {
-        cout <<"Welcome"<<user<<"\nWelcome to Cardinal OS Build 0.0.04.500" endl;
+        cout <<"Welcome"<<user<<"\nWelcome to Cardinal OS Build 0.0.04.000" endl;
         cout <<"This is still a working progress so please wait for later updates." endl;
         cout <<"Lead Dev JY48572" endl;
         cin.get();
