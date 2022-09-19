@@ -109,12 +109,12 @@ void Dev_Login()
     if(exist == 1)
     {
         cout <<"Welcome"<<devuser<<"Please select a choice to continue." endl;
-        int choice();
+        int choice;
         cout <<"1.Setings" endl;
         cout <<"\n2.Logout" endl;
         cout <<"\n3.Exit" endl
         cout <<"\nEnter Choice" endl;
-        switch(choice)
+        switch (choice)
         {
             case 1:
                 Setings.h;
@@ -178,7 +178,7 @@ void Dev_Register()
 
 void Forgot_Info()
 {
-    int choice();
+    int choice;
     system("cls");
     cout <<"1.Search By Username" endl;
     cout <<"\n2.Search By Password" endl;
@@ -186,7 +186,7 @@ void Forgot_Info()
     cout <<"\nEnter Choice" endl;
     cin>>choice;
 
-    switch(choice)
+    switch (choice)
     {
         case 1:
         {
@@ -280,7 +280,7 @@ void Forgot_Dev_Info()
     cout <<"\nEnter Choice" endl;
     cin>>choice;
 
-    switch(choice)
+    switch (choice)
     {
         case 1:
         {
@@ -361,13 +361,13 @@ void Forgot_Dev_Info()
 
 void Other()
 {
-    int choice();
+    int choice;
     cout <<"1.Restart" endl;
     cout <<"\n2.Close" endl;
     cout <<"\n3.FRC" endl;
     cout <<"\nEnter Choice :" endl;
     cin>>choice;
-    switch(choice)
+    switch (choice)
     {
         case 1:
             Restart();
@@ -386,7 +386,7 @@ void Other()
 
 FRC()
 {
-    int choice();
+    int choice;
     cout <<"Welcome To first Robotics" endl;
     cout <<""
 }
