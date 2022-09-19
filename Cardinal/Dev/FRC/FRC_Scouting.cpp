@@ -4,7 +4,7 @@ using namespace std;
 
 main()
 {
-    int choice();
+    int choice;
     cout <<"Welcome To The 1895 Lambda Core's Scouting App." endl;
     cout <<"1.Login" endl;
     cout <<"\n2.Register" endl;
