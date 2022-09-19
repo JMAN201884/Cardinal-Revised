@@ -11,7 +11,7 @@ main()
     cout <<"\n3.Close" endl;
     cout <<"\nEnter Choice" endl;
     cin>>choice;
-    switch(choice)
+    switch (choice)
     {
         case 1:
             Login();
