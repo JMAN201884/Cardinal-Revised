@@ -4,12 +4,12 @@ using namespace std;
 
 main()
 {
-    int choice();
+    int choice;
     cout <<"Welcome To The Settings" endl;
     cout <<"1.Login" endl;
     cout <<"\nenter Choice To Continue" endl;
     cin>>choice;
-    switch(choice)
+    switch (choice)
     {
         case 1:
             Login();
@@ -43,11 +43,11 @@ void Login()
     if(exist == 1)
     {
         cout <<"Welcome"<<devuser<<"Please Select A Choice To Continue" endl;
-        int choice();
+        int choice;
         cout <<"1.Logout" endl;
         cout <<"\n2.Exit" endl;
         cout <<"\nEnter Choice" endl;
-        switch(choice)
+        switch (choice)
         {
             case 1:
                 Logout();
