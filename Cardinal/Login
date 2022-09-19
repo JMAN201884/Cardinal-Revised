@@ -6,7 +6,7 @@ using namespace std;
 
 main()
 {
-    int choice();
+    int choice;
     cout <<"Welcom To the Login" endl;
     cout <<"1.Login" endl;
     cout <<"\n2.Dev_Login" endl
@@ -17,7 +17,7 @@ main()
     cout <<"\n7.Other" endl;
     cout <<"\nEnter Choice " endl;
     cin>>choice;
-    switch(choice)
+    switch (choice)
     {
         case 1:
             Login();
